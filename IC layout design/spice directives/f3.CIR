@@ -1,0 +1,57 @@
+CIRCUIT C:\Users\schuh\Desktop\f3.MSK
+*
+* IC Technology: K-CMOS Free-PDK-Based 45nm - 6 Metal
+*
+VDD 1 0 DC 1.00
+Va 7 0 DC 0 PULSE(0.00 1.00 0.23N 0.03N 0.03N 0.23N 0.50N)
+Vb 8 0 DC 0 PULSE(0.00 1.00 0.48N 0.03N 0.03N 0.48N 1.00N)
+*
+* List of nodes
+* "out f3" corresponds to n°3
+* "N4" corresponds to n°4
+* "N5" corresponds to n°5
+* "gnd" corresponds to n°6
+* "a" corresponds to n°7
+* "b" corresponds to n°8
+*
+* MOS devices
+MN1 0 4 3 0 N1  W= 0.10U L= 0.05U
+MN2 0 8 4 0 N1  W= 0.10U L= 0.05U
+MN3 4 7 0 0 N1  W= 0.10U L= 0.05U
+MP1 1 4 3 1 P1  W= 0.10U L= 0.05U
+MP2 5 8 4 1 P1  W= 0.25U L= 0.05U
+MP3 1 7 5 1 P1  W= 0.25U L= 0.05U
+*
+C2 1 0  0.265fF
+C3 3 0  0.075fF
+C4 4 0  0.157fF
+C5 5 0  0.056fF
+C7 7 0  0.024fF
+C8 8 0  0.027fF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.40 UO=600.000 TOX= 2.0E-9
++LD =0.000U THETA=0.500 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=120.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* low leakage
+.MODEL P1 PMOS LEVEL=3 VTO=-0.45 UO=200.000 TOX= 2.0E-9
++LD =0.000U THETA=0.300 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=110.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+* (Winspice)
+.options temp=27.0
+.control
+tran 0.1N 5.00N
+print  V(7) V(8) V(6) V(3) > out.txt
+plot  V(7) V(8) V(6) V(3)
+.endc
+.END

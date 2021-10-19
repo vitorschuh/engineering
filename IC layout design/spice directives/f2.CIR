@@ -1,0 +1,113 @@
+CIRCUIT C:\Users\schuh\Desktop\f2.MSK
+*
+* IC Technology: K-CMOS Free-PDK-Based 45nm - 6 Metal
+*
+VDD 1 0 DC 1.00
+V2_vdd 2 0 DC 0.20V
+Va 22 0 DC 0 PULSE(0.00 1.00 0.23N 0.03N 0.03N 0.23N 0.50N)
+Vb 23 0 DC 0 PULSE(0.00 1.00 0.48N 0.03N 0.03N 0.48N 1.00N)
+Vc 24 0 DC 0 PULSE(0.00 1.00 0.98N 0.03N 0.03N 0.97N 2.00N)
+Vnot b 25 0 DC 0 PULSE(0.00 1.00 3.98N 0.03N 0.03N 3.98N 8.00N)
+Vnot a 26 0 DC 0 PULSE(0.00 1.00 1.97N 0.03N 0.03N 1.97N 4.00N)
+Vnot c 27 0 DC 0 PULSE(0.00 1.00 7.98N 0.03N 0.03N 7.97N 16.00N)
+*
+* List of nodes
+* "N3" corresponds to n°3
+* "N4" corresponds to n°4
+* "out f2" corresponds to n°5
+* "N6" corresponds to n°6
+* "N7" corresponds to n°7
+* "N8" corresponds to n°8
+* "N9" corresponds to n°9
+* "gnd" corresponds to n°18
+* "a" corresponds to n°22
+* "b" corresponds to n°23
+* "c" corresponds to n°24
+* "not b" corresponds to n°25
+* "not a" corresponds to n°26
+* "not c" corresponds to n°27
+*
+* MOS devices
+MN1 15 24 5 0 N1  W= 0.40U L= 0.05U
+MN2 5 26 15 0 N1  W= 0.40U L= 0.05U
+MN3 15 25 5 0 N1  W= 0.40U L= 0.05U
+MN4 16 27 15 0 N1  W= 0.40U L= 0.05U
+MN5 15 26 16 0 N1  W= 0.40U L= 0.05U
+MN6 16 23 15 0 N1  W= 0.40U L= 0.05U
+MN7 17 22 16 0 N1  W= 0.40U L= 0.05U
+MN8 16 25 17 0 N1  W= 0.40U L= 0.05U
+MN9 17 27 16 0 N1  W= 0.40U L= 0.05U
+MN10 0 24 17 0 N1  W= 0.40U L= 0.05U
+MN11 17 23 0 0 N1  W= 0.40U L= 0.05U
+MN12 0 22 17 0 N1  W= 0.40U L= 0.05U
+MN13 0 24 19 0 N1  W= 0.10U L= 0.05U
+MN14 0 23 20 0 N1  W= 0.10U L= 0.05U
+MN15 0 22 21 0 N1  W= 0.10U L= 0.05U
+MP1 3 24 2 2 P1  W= 0.43U L= 0.05U
+MP2 4 26 3 2 P1  W= 0.43U L= 0.05U
+MP3 5 25 4 2 P1  W= 0.43U L= 0.05U
+MP4 6 27 5 2 P1  W= 0.43U L= 0.05U
+MP5 7 26 6 2 P1  W= 0.43U L= 0.05U
+MP6 2 23 7 2 P1  W= 0.43U L= 0.05U
+MP7 8 22 2 2 P1  W= 0.43U L= 0.05U
+MP8 9 25 8 2 P1  W= 0.43U L= 0.05U
+MP9 5 27 9 2 P1  W= 0.43U L= 0.05U
+MP10 10 24 5 2 P1  W= 0.43U L= 0.05U
+MP11 11 23 10 2 P1  W= 0.43U L= 0.05U
+MP12 2 22 11 2 P1  W= 0.43U L= 0.05U
+MP13 2 24 12 2 P1  W= 0.15U L= 0.05U
+MP14 2 23 13 2 P1  W= 0.15U L= 0.05U
+MP15 2 22 14 2 P1  W= 0.15U L= 0.05U
+*
+C2 2 0  1.039fF
+C3 3 0  0.082fF
+C4 4 0  0.082fF
+C5 5 0  0.405fF
+C6 6 0  0.082fF
+C7 7 0  0.082fF
+C8 8 0  0.082fF
+C9 9 0  0.082fF
+C10 10 0  0.082fF
+C11 11 0  0.088fF
+C12 12 0  0.034fF
+C13 13 0  0.034fF
+C14 14 0  0.034fF
+C15 15 0  0.282fF
+C16 16 0  0.276fF
+C17 17 0  0.273fF
+C19 19 0  0.027fF
+C20 20 0  0.027fF
+C21 21 0  0.027fF
+C22 22 0  0.173fF
+C23 23 0  0.176fF
+C24 24 0  0.193fF
+C25 25 0  0.157fF
+C26 26 0  0.167fF
+C27 27 0  0.147fF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.40 UO=600.000 TOX= 2.0E-9
++LD =0.000U THETA=0.500 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=120.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* low leakage
+.MODEL P1 PMOS LEVEL=3 VTO=-0.45 UO=200.000 TOX= 2.0E-9
++LD =0.000U THETA=0.300 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=110.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+* (Winspice)
+.options temp=27.0
+.control
+tran 0.1N 2.00N
+print  V(2) V(5) V(22) V(23) V(18) V(26) V(25) V(27) > out.txt
+plot  V(2) V(5) V(22) V(23) V(18) V(26) V(25) V(27)
+.endc
+.END
