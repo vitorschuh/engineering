@@ -1,0 +1,151 @@
+CIRCUIT C:\Users\schuh\Desktop\ci_final.MSK
+*
+* IC Technology: K-CMOS Free-PDK-Based 45nm - 6 Metal
+*
+VDD 1 0 DC 1.00
+Vnot a 32 0 DC 0 PULSE(0.00 1.00 1.97N 0.03N 0.03N 1.97N 4.00N)
+Vc 33 0 DC 0 PULSE(0.00 1.00 0.98N 0.03N 0.03N 0.97N 2.00N)
+Vnot b 34 0 DC 0 PULSE(0.00 1.00 3.98N 0.03N 0.03N 3.98N 8.00N)
+Va 35 0 DC 0 PULSE(0.00 1.00 0.23N 0.03N 0.03N 0.23N 0.50N)
+Vb 36 0 DC 0 PULSE(0.00 1.00 0.48N 0.03N 0.03N 0.48N 1.00N)
+Vnot c 37 0 DC 0 PULSE(0.00 1.00 7.98N 0.03N 0.03N 7.97N 16.00N)
+Vd 38 0 DC 0 PULSE(0.00 1.00 1.97N 0.03N 0.03N 1.97N 4.00N)
+Va 39 0 DC 0 PULSE(0.00 1.00 0.23N 0.03N 0.03N 0.23N 0.50N)
+Vb 40 0 DC 0 PULSE(0.00 1.00 0.48N 0.03N 0.03N 0.48N 1.00N)
+Vc 41 0 DC 0 PULSE(0.00 1.00 0.98N 0.03N 0.03N 0.97N 2.00N)
+*
+* List of nodes
+* "out f3" corresponds to n°3
+* "N4" corresponds to n°4
+* "N5" corresponds to n°5
+* "N6" corresponds to n°6
+* "N7" corresponds to n°7
+* "out f2" corresponds to n°8
+* "N9" corresponds to n°9
+* "out f1" corresponds to n°15
+* "gnd" corresponds to n°20, WARNING: appears 3 times in the layout
+* "gnd" corresponds to n°24, WARNING: appears 3 times in the layout
+* "gnd" corresponds to n°25, WARNING: appears 3 times in the layout
+* "not a" corresponds to n°32
+* "c" corresponds to n°33, WARNING: appears 2 times in the layout
+* "not b" corresponds to n°34
+* "a" corresponds to n°35, WARNING: appears 2 times in the layout
+* "b" corresponds to n°36, WARNING: appears 2 times in the layout
+* "not c" corresponds to n°37
+* "d" corresponds to n°38
+* "a" corresponds to n°39, WARNING: appears 2 times in the layout
+* "b" corresponds to n°40, WARNING: appears 2 times in the layout
+* "c" corresponds to n°41, WARNING: appears 2 times in the layout
+*
+* MOS devices
+MN1 0 5 3 0 N1  W= 0.10U L= 0.05U
+MN2 21 33 8 0 N1  W= 0.40U L= 0.05U
+MN3 8 32 21 0 N1  W= 0.40U L= 0.05U
+MN4 0 8 5 0 N1  W= 0.10U L= 0.05U
+MN5 21 34 8 0 N1  W= 0.40U L= 0.05U
+MN6 5 15 0 0 N1  W= 0.10U L= 0.05U
+MN7 22 37 21 0 N1  W= 0.40U L= 0.05U
+MN8 21 32 22 0 N1  W= 0.40U L= 0.05U
+MN9 22 36 21 0 N1  W= 0.40U L= 0.05U
+MN10 23 35 22 0 N1  W= 0.40U L= 0.05U
+MN11 22 34 23 0 N1  W= 0.40U L= 0.05U
+MN12 23 37 22 0 N1  W= 0.40U L= 0.05U
+MN13 0 33 23 0 N1  W= 0.40U L= 0.05U
+MN14 23 36 0 0 N1  W= 0.40U L= 0.05U
+MN15 0 35 23 0 N1  W= 0.40U L= 0.05U
+MN16 0 17 15 0 N1  W= 0.10U L= 0.05U
+MN17 0 33 26 0 N1  W= 0.10U L= 0.05U
+MN18 27 38 17 0 N1  W= 0.40U L= 0.05U
+MN19 29 41 27 0 N1  W= 0.40U L= 0.05U
+MN20 0 36 28 0 N1  W= 0.10U L= 0.05U
+MN21 30 40 29 0 N1  W= 0.40U L= 0.05U
+MN22 0 39 30 0 N1  W= 0.40U L= 0.05U
+MN23 0 35 31 0 N1  W= 0.10U L= 0.05U
+MP1 1 5 3 1 P1  W= 0.10U L= 0.05U
+MP2 4 33 1 1 P1  W= 0.43U L= 0.05U
+MP3 6 32 4 1 P1  W= 0.43U L= 0.05U
+MP4 7 8 5 1 P1  W= 0.25U L= 0.05U
+MP5 8 34 6 1 P1  W= 0.43U L= 0.05U
+MP6 1 15 7 1 P1  W= 0.25U L= 0.05U
+MP7 9 37 8 1 P1  W= 0.43U L= 0.05U
+MP8 10 32 9 1 P1  W= 0.43U L= 0.05U
+MP9 1 36 10 1 P1  W= 0.43U L= 0.05U
+MP10 11 35 1 1 P1  W= 0.43U L= 0.05U
+MP11 12 34 11 1 P1  W= 0.43U L= 0.05U
+MP12 8 37 12 1 P1  W= 0.43U L= 0.05U
+MP13 13 33 8 1 P1  W= 0.43U L= 0.05U
+MP14 14 36 13 1 P1  W= 0.43U L= 0.05U
+MP15 1 35 14 1 P1  W= 0.43U L= 0.05U
+MP16 1 17 15 1 P1  W= 0.10U L= 0.05U
+MP17 1 33 16 1 P1  W= 0.13U L= 0.05U
+MP18 1 38 17 1 P1  W= 0.10U L= 0.05U
+MP19 17 41 1 1 P1  W= 0.10U L= 0.05U
+MP20 1 36 18 1 P1  W= 0.13U L= 0.05U
+MP21 1 40 17 1 P1  W= 0.10U L= 0.05U
+MP22 17 39 1 1 P1  W= 0.10U L= 0.05U
+MP23 1 35 19 1 P1  W= 0.13U L= 0.05U
+*
+C2 1 0  1.674fF
+C3 3 0  0.085fF
+C4 4 0  0.082fF
+C5 5 0  0.157fF
+C6 6 0  0.082fF
+C7 7 0  0.056fF
+C8 8 0  0.510fF
+C9 9 0  0.082fF
+C10 10 0  0.082fF
+C11 11 0  0.082fF
+C12 12 0  0.082fF
+C13 13 0  0.082fF
+C14 14 0  0.088fF
+C15 15 0  0.124fF
+C16 16 0  0.031fF
+C17 17 0  0.225fF
+C18 18 0  0.031fF
+C19 19 0  0.031fF
+C21 21 0  0.282fF
+C22 22 0  0.276fF
+C23 23 0  0.273fF
+C26 26 0  0.027fF
+C27 27 0  0.082fF
+C28 28 0  0.027fF
+C29 29 0  0.082fF
+C30 30 0  0.082fF
+C31 31 0  0.027fF
+C32 32 0  0.167fF
+C33 33 0  0.193fF
+C34 34 0  0.157fF
+C35 35 0  0.173fF
+C36 36 0  0.176fF
+C37 37 0  0.147fF
+C38 38 0  0.043fF
+C39 39 0  0.033fF
+C40 40 0  0.036fF
+C41 41 0  0.040fF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.40 UO=600.000 TOX= 2.0E-9
++LD =0.000U THETA=0.500 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=120.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* p-MOS Model 3:
+* low leakage
+.MODEL P1 PMOS LEVEL=3 VTO=-0.45 UO=200.000 TOX= 2.0E-9
++LD =0.000U THETA=0.300 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=110.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+* (Winspice)
+.options temp=27.0
+.control
+tran 0.1N 5.00N
+print  V(41) V(40) V(39) V(15) V(25) V(33) V(37) V(34) V(32) V(24) V(36) V(35) V(8) V(2) V(20) V(3) > out.txt
+plot  V(41) V(40) V(39) V(15) V(25) V(33) V(37) V(34) V(32) V(24) V(36) V(35) V(8) V(2) V(20) V(3)
+.endc
+.END
