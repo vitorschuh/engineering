@@ -1,0 +1,159 @@
+Circuit: * Nome: Vitor Eduardo Schuh
+
+Vind: Removing PWL point (6.3e-008,0)
+Vinc: Removing PWL point (3e-009,0)
+Vinc: Removing PWL point (9e-009,1)
+Vinc: Removing PWL point (1.5e-008,0)
+Vinc: Removing PWL point (2.4e-008,0)
+Vinc: Removing PWL point (3e-008,1)
+Vinc: Removing PWL point (3.6e-008,0)
+Vinc: Removing PWL point (4.5e-008,0)
+Vinc: Removing PWL point (4.9e-008,0)
+Vinc: Removing PWL point (5.2e-008,0)
+Vinc: Removing PWL point (5.5e-008,0)
+Vinc: Removing PWL point (5.8e-008,0)
+Vinb: Removing PWL point (3e-009,0)
+Vinb: Removing PWL point (1.5e-008,1)
+Vinb: Removing PWL point (2.4e-008,0)
+Vinb: Removing PWL point (2.7e-008,0)
+Vinb: Removing PWL point (3e-008,0)
+Vinb: Removing PWL point (3.3e-008,0)
+Vinb: Removing PWL point (3.6e-008,0)
+Vinb: Removing PWL point (3.9e-008,0)
+Vinb: Removing PWL point (4.2e-008,0)
+Vinb: Removing PWL point (5.1e-008,1)
+Vinb: Removing PWL point (5.7e-008,0)
+Vinb: Removing PWL point (6.3e-008,1)
+Vina: Removing PWL point (3e-009,0)
+Vina: Removing PWL point (6e-009,0)
+Vina: Removing PWL point (2.1e-008,0)
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+atraso_a000lh=9.06208e-011 FROM 1.0005e-009 TO 1.09112e-009
+atraso_a000hl=1.29435e-010 FROM 2.0005e-009 TO 2.12993e-009
+atraso_a001lh=8.96121e-011 FROM 4.0005e-009 TO 4.09011e-009
+atraso_a001hl=1.29486e-010 FROM 5.0005e-009 TO 5.12999e-009
+atraso_a010lh=1.26869e-010 FROM 7.0005e-009 TO 7.12737e-009
+atraso_a010hl=1.17758e-010 FROM 8.0005e-009 TO 8.11826e-009
+atraso_a011lh=1.2719e-010 FROM 1.00005e-008 TO 1.01277e-008
+atraso_a011hl=1.17751e-010 FROM 1.10005e-008 TO 1.11183e-008
+atraso_a100lh=1.07649e-010 FROM 1.30005e-008 TO 1.31081e-008
+atraso_a100hl=1.0461e-010 FROM 1.40005e-008 TO 1.41051e-008
+atraso_a101lh=1.07858e-010 FROM 1.60005e-008 TO 1.61084e-008
+atraso_a101hl=1.04623e-010 FROM 1.70005e-008 TO 1.71051e-008
+atraso_a110lh=8.70071e-011 FROM 1.90005e-008 TO 1.90875e-008
+atraso_a110hl=1.15174e-010 FROM 2.00005e-008 TO 2.01157e-008
+atraso_0b00lh=8.71468e-011 FROM 2.2e-008 TO 2.20872e-008
+atraso_0b00hl=1.23714e-010 FROM 2.30001e-008 TO 2.31238e-008
+atraso_0b01lh=1.23974e-010 FROM 2.60001e-008 TO 2.6124e-008
+atraso_0b01hl=8.35578e-011 FROM 2.5e-008 TO 2.50836e-008
+atraso_0b10lh=1.3671e-010 FROM 2.8e-008 TO 2.81368e-008
+atraso_0b10hl=1.18389e-010 FROM 2.90001e-008 TO 2.91184e-008
+atraso_0b11lh=1.33083e-010 FROM 3.1e-008 TO 3.11331e-008
+atraso_0b11hl=1.18324e-010 FROM 3.20001e-008 TO 3.21184e-008
+atraso_1b00lh=9.64981e-011 FROM 3.4e-008 TO 3.40965e-008
+atraso_1b00hl=9.86295e-011 FROM 3.50001e-008 TO 3.50987e-008
+atraso_1b01lh=9.83672e-011 FROM 3.7e-008 TO 3.70984e-008
+atraso_1b01hl=1.01528e-010 FROM 3.80001e-008 TO 3.81016e-008
+atraso_1b10lh=1.01128e-010 FROM 4.10001e-008 TO 4.11012e-008
+atraso_1b10hl=8.02706e-011 FROM 4e-008 TO 4.00803e-008
+atraso_00c0lh=1.1725e-010 FROM 4.40001e-008 TO 4.41173e-008
+atraso_00c0hl=8.29523e-011 FROM 4.3e-008 TO 4.3083e-008
+atraso_00c1lh=1.17235e-010 FROM 4.70001e-008 TO 4.71173e-008
+atraso_00c1hl=7.76443e-011 FROM 4.6e-008 TO 4.60777e-008
+atraso_01c0lh=1.27511e-010 FROM 5.00001e-008 TO 5.01276e-008
+atraso_01c0hl=1.17417e-010 FROM 5.10001e-008 TO 5.11175e-008
+atraso_01c1lh=1.2583e-010 FROM 5.3e-008 TO 5.31259e-008
+atraso_01c1hl=1.10072e-010 FROM 5.40001e-008 TO 5.41101e-008
+atraso_10c0lh=1.06509e-010 FROM 5.6e-008 TO 5.61066e-008
+atraso_10c0hl=1.05287e-010 FROM 5.70001e-008 TO 5.71053e-008
+atraso_10c1lh=1.07064e-010 FROM 5.9e-008 TO 5.91071e-008
+atraso_10c1hl=1.07064e-010 FROM 5.9e-008 TO 5.91071e-008
+atraso_11c0lh=8.67164e-011 FROM 6.2e-008 TO 6.20868e-008
+atraso_11c0hl=6.96341e-011 FROM 6.10001e-008 TO 6.10697e-008
+atraso_111dlh=6.16157e-011 FROM 6.40005e-008 TO 6.40621e-008
+atraso_111dhl=6.77893e-011 FROM 6.50005e-008 TO 6.50683e-008
+consumo_medio: AVG(i(v1)*-v(vdd))=6.90656e-006 FROM 0 TO 6.6e-008
+consumo_estatico_a000hl: AVG(i(v1)*-v(vdd))=6.22318e-008 FROM 1.97e-009 TO 2e-009
+consumo_estatico_a000lh: AVG(i(v1)*v(vdd))=-2.74363e-007 FROM 2.97e-009 TO 3e-009
+consumo_estatico_a001hl: AVG(i(v1)*v(vdd))=-6.19424e-008 FROM 4.97e-009 TO 5e-009
+consumo_estatico_a001lh: AVG(i(v1)*v(vdd))=-2.74942e-007 FROM 5.97e-009 TO 6e-009
+consumo_estatico_a010hl: AVG(i(v1)*v(vdd))=-1.44788e-007 FROM 7.97e-009 TO 8e-009
+consumo_estatico_a010lh: AVG(i(v1)*-v(vdd))=1.05445e-007 FROM 8.97e-009 TO 9e-009
+consumo_estatico_a011hl: AVG(i(v1)*v(vdd))=-1.14582e-007 FROM 1.097e-008 TO 1.1e-008
+consumo_estatico_a011lh: AVG(i(v1)*-v(vdd))=8.55681e-008 FROM 1.197e-008 TO 1.2e-008
+consumo_estatico_a100hl: AVG(i(v1)*v(vdd))=-1.80729e-008 FROM 1.397e-008 TO 1.4e-008
+consumo_estatico_a100lh: AVG(i(v1)*v(vdd))=-5.87086e-008 FROM 1.497e-008 TO 1.5e-008
+consumo_estatico_a101hl: AVG(i(v1)*v(vdd))=-1.9713e-008 FROM 1.697e-008 TO 1.7e-008
+consumo_estatico_a101lh: AVG(i(v1)*v(vdd))=-6.35281e-008 FROM 1.797e-008 TO 1.8e-008
+consumo_estatico_a110hl: AVG(i(v1)*v(vdd))=-1.93939e-007 FROM 1.997e-008 TO 2e-008
+consumo_estatico_a110lh: AVG(i(v1)*-v(vdd))=2.3762e-007 FROM 2.097e-008 TO 2.1e-008
+consumo_estatico_0b00hl: AVG(i(v1)*v(vdd))=-8.86323e-008 FROM 2.297e-008 TO 2.3e-008
+consumo_estatico_0b00lh: AVG(i(v1)*v(vdd))=-2.76196e-007 FROM 2.397e-008 TO 2.4e-008
+consumo_estatico_0b01hl: AVG(i(v1)*v(vdd))=-7.75873e-008 FROM 2.597e-008 TO 2.6e-008
+consumo_estatico_0b01lh: AVG(i(v1)*v(vdd))=-2.76173e-007 FROM 2.697e-008 TO 2.7e-008
+consumo_estatico_0b10hl: AVG(i(v1)*-v(vdd))=2.59955e-007 FROM 2.897e-008 TO 2.9e-008
+consumo_estatico_0b10lh: AVG(i(v1)*v(vdd))=-1.31447e-007 FROM 2.997e-008 TO 3e-008
+consumo_estatico_0b11hl: AVG(i(v1)*-v(vdd))=2.00355e-007 FROM 3.197e-008 TO 3.2e-008
+consumo_estatico_0b11lh: AVG(i(v1)*v(vdd))=-1.25154e-007 FROM 3.297e-008 TO 3.3e-008
+consumo_estatico_1b00hl: AVG(i(v1)*-v(vdd))=1.86495e-008 FROM 3.497e-008 TO 3.5e-008
+consumo_estatico_1b00lh: AVG(i(v1)*v(vdd))=-6.28723e-008 FROM 3.597e-008 TO 3.6e-008
+consumo_estatico_1b01hl: AVG(i(v1)*-v(vdd))=2.05004e-008 FROM 3.797e-008 TO 3.8e-008
+consumo_estatico_1b01lh: AVG(i(v1)*v(vdd))=-7.99492e-008 FROM 3.897e-008 TO 3.9e-008
+consumo_estatico_1b10hl: AVG(i(v1)*-v(vdd))=2.25483e-007 FROM 4.097e-008 TO 4.1e-008
+consumo_estatico_1b10lh: AVG(i(v1)*v(vdd))=-1.36175e-007 FROM 4.197e-008 TO 4.2e-008
+consumo_estatico_00c0hl: AVG(i(v1)*-v(vdd))=1.10952e-007 FROM 4.397e-008 TO 4.4e-008
+consumo_estatico_00c0lh: AVG(i(v1)*v(vdd))=-2.7579e-007 FROM 4.497e-008 TO 4.5e-008
+consumo_estatico_00c1hl: AVG(i(v1)*-v(vdd))=9.56109e-008 FROM 4.697e-008 TO 4.7e-008
+consumo_estatico_00c1lh: AVG(i(v1)*v(vdd))=-2.75404e-007 FROM 4.797e-008 TO 4.8e-008
+consumo_estatico_01c0hl: AVG(i(v1)*-v(vdd))=3.67991e-008 FROM 4.997e-008 TO 5e-008
+consumo_estatico_01c0lh: AVG(i(v1)*v(vdd))=-2.51204e-007 FROM 5.097e-008 TO 5.1e-008
+consumo_estatico_01c1hl: AVG(i(v1)*v(vdd))=-4.50754e-008 FROM 5.297e-008 TO 5.3e-008
+consumo_estatico_01c1lh: AVG(i(v1)*v(vdd))=-2.62383e-007 FROM 5.397e-008 TO 5.4e-008
+consumo_estatico_10c0hl: AVG(i(v1)*v(vdd))=-5.76744e-008 FROM 5.597e-008 TO 5.6e-008
+consumo_estatico_10c0lh: AVG(i(v1)*v(vdd))=-1.31032e-007 FROM 5.697e-008 TO 5.7e-008
+consumo_estatico_10c1hl: AVG(i(v1)*v(vdd))=-3.88101e-008 FROM 5.897e-008 TO 5.9e-008
+consumo_estatico_10c1lh: AVG(i(v1)*v(vdd))=-1.16466e-007 FROM 5.997e-008 TO 6e-008
+consumo_estatico_11c0hl: AVG(i(v1)*-v(vdd))=2.30712e-007 FROM 6.197e-008 TO 6.2e-008
+consumo_estatico_11c0lh: AVG(i(v1)*v(vdd))=-1.77975e-008 FROM 6.297e-008 TO 6.3e-008
+consumo_estatico_111dhl: AVG(i(v1)*v(vdd))=-8.25217e-008 FROM 6.497e-008 TO 6.5e-008
+consumo_estatico_111dlh: AVG(i(v1)*v(vdd))=-1.20783e-007 FROM 6.597e-008 TO 6.6e-008
+
+
+Date: Thu Jun 03 19:30:58 2021
+Total elapsed time: 1.622 seconds.
+
+tnom = 27
+temp = 27
+method = Gear
+totiter = 8551
+traniter = 8090
+tranpoints = 2668
+accept = 2496
+rejected = 172
+matrix size = 324
+fillins = 54
+solver = Normal
+Thread vector: 273.9/62.7[6] 30.1/16.2[6] 11.0/4.6[6] 4.6/631.6[1]  2592/500
+Matrix Compiler1: 57.60 KB object code size  30.1/17.7/[8.6]
+Matrix Compiler2:    3080 opcodes  12.6/[11.0]/20.4
+
