@@ -1,7 +1,7 @@
 clc; clear all;
 t = -1:1e-6:1;
 
-%%Hjw = 7.5e12 / (jw^3 + 37e3jw^2 + 610e6jw 7.5e12)
+% Hjw = 7.5e12 / (jw^3 + 37e3jw^2 + 610e6jw 7.5e12)
 
 b = 7.5*10^12;
 a = [1  37*10^3  610*10^6  7.5*10^12];
@@ -46,32 +46,51 @@ a = [1  37*10^3  610*10^6  7.5*10^12];
 %    0.9341
 %    0.9341
 
+%%
+
 ht = (12400.*exp(-24597.*t) + 18682.*exp(-6202.*t).*cos((-16324.*t)+2.2966)) .* u(t);
-figure(1); plot(t, ht); xlim([0 0.1e-2]); title('Transformada inversa do canal aproximada na janela de settling');
+figure(); plot(t, ht); xlim([0 0.1e-2]); title('Transformada inversa do canal aproximada na janela de settling');
 
 ht2 = tf(b, a);
-figure(2); impulse(ht2);
+figure(); impulse(ht2);
+
 
 %% bitstream gen
+
 ts = 7e-3;
 dt = 1e-5;
 
 n_ex = 10;
 bitstream_ex = randi([0 1], 1, 2*n_ex);
 [cod_ex, t_ex] = pam4(bitstream_ex, ts, dt);
-figure(3); plot(t_ex, cod_ex); ylim([-3.5 3.5]); title('Amostra codificada em PAM4');
+
+figure(); plot(t_ex, cod_ex); ylim([-3.5 3.5]); title('Amostra codificada em PAM4');
 
 n = 200;
 bitstream = randi([0 1], 1, 2*n);
 [cod, t] = pam4(bitstream, ts, dt);
-figure(4); plot(t, cod); ylim([-3.5 3.5]); title('Bitstream de 200x2 amostras codificada em PAM4')
 
-%% sinal transmitido
+figure(); plot(t, cod); ylim([-3.5 3.5]); title('Bitstream de 200x2 amostras codificada em PAM4')
+
+%% conv
+
 ht = (12400.*exp(-24597.*t) + 18682.*exp(-6202.*t).*cos((-16324.*t)+2.2966)) .* u(t);
 x = (conv(ht, cod)).*dt;
-figure(5); plot(t,x(1:length(t))); title('Sinal transmitido');
 
-%% eye
+figure(); my_fft(1/dt, x);  title('Espectro do sinal transmitido');  ylabel('X(f)'); xlabel('f'); %xlim([-1e4 1e4]);
+figure(); plot(t,x(1:length(t))); title('Sinal transmitido'); 
+
+%% eyed
+
 ts = .55e-3;
 n_arg = round(((ts/2))/dt);
 eyediagram(x(1:length(t)), n_arg, ts, 25);
+
+%% freq response
+
+ts = .55e-3;
+dt = 1e-5;
+fs = 1/dt;
+[cod, t] = pam4(bitstream, ts, dt);
+ht = (12400.*exp(-24597.*t) + 18682.*exp(-6202.*t).*cos((-16324.*t)+2.2966)) .* u(t);
+figure(); my_fft(fs, ht); xlim([-1e4 1e4]); title('Espectro do canal no domínio frequência'); xlabel('f');
