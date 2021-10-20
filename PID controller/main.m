@@ -34,13 +34,13 @@ Ki = Kp/Ti;
 Kd = Kp*Td;
 C1 = pid(Kp,Ki,Kd);
 
-% avaliando o sistema após a adiçao do PID
+% avaliando o sistema apÃ³s a adiÃ§ao do PID
 figure(3);
 step(feedback(C1*G1,1)); 
 figure(4);
 step(feedback(1,C1*G1)); 
 
-% otimizaçao da resposta a referencia
+% otimizaÃ§ao da resposta a referencia
 % overshot 0%
 Ti = T;
 Td = L/2;
@@ -56,7 +56,7 @@ Ki = Kp/Ti;
 Kd = Kp*Td;
 C1alt2 = pid(Kp,Ki,Kd);
 
-% otimizaçao da resposta a perturbaçao
+% otimizaÃ§ao da resposta a perturbaÃ§ao
 % overshot 0%
 Ti = 2.4*L;
 Td = .47*L;
@@ -154,20 +154,3 @@ Kd = Kp*Td;
 C3t = pid(Kp,Ki,Kd);
 figure(12); step(feedback(C3t*G3tunned,1));
 
-%% planta cesinha
-s=tf('s');
-gc=(0.1)/(s^2 + 1.1*s + 0.15);
-[y,t] = step(gc,0:0.001:30);
-h = mean(diff(t));
-dy = gradient(y, h);                                            
-[~,idx] = max(dy);                                             
-b = [t([idx-1,idx+1]) ones(2,1)] \ y([idx-1,idx+1]);           
-tv = [-b(2)/b(1); (1-b(2))/b(1)];                              
-f = [t ones(size(t))] * b;                                     
-figure(9);
-plot(t, y); 
-hold on
-plot(t, f,'--', 'Color', 'green');                    
-plot(t(idx), y(idx), 'o','MarkerSize',6, 'MarkerEdgeColor','green', 'MarkerFaceColor',[1 .6 .6]);
-hold off
-grid
