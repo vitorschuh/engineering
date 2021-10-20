@@ -153,4 +153,3 @@ Ki = Kp/Ti;
 Kd = Kp*Td;
 C3t = pid(Kp,Ki,Kd);
 figure(12); step(feedback(C3t*G3tunned,1));
-
