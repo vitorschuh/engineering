@@ -1,5 +1,5 @@
 # engineering ⚙️
-repo to archive my academic eng projects (nothing very useful if you aren't a eletrical or eletronic eng student)
+repo to archive my academic eng projects (nothing very useful if you aren't an eletrical or eletronic eng student)
 
 ## context
 the repo folders contain projects developed in the disciplines of design of integrated circuits, systems and signals, communication systems and control systems in the final semesters of the bachelor's degree in computer eng
