@@ -1,12 +1,12 @@
 clc; clear all;
 
-dt = 2e-4;
+dt = 2e-4; % passo sugerido
 l = -1;
 h = 1;
 t = l:dt:h-dt;
 trap_impact = .5;
 
-% metricas tc do art alan
+% metricas de tempo tc do art alan
 tc_1 = [1e-3, 1e-3];
 tc_2 = [1e-2, 1e-4];
 tc_3 = [1e-1, 1e-5];
@@ -15,10 +15,10 @@ tc_5 = [1e-3, 1e-5];
 
 % verificacao do ruido
 bitstream = rtn_simple(t, dt, tc_1, trap_impact);
-figure(1); plot(t, bitstream); title('Bitstream de 50 bits referente ao fenômeno de ruído telegráfico aleatório');
+figure(1); plot(t, bitstream); xlim([-5e-2 5e-2]); title('Bitstream de 50 bits referente ao fenômeno de ruído telegráfico aleatório');
 
 %% simulacoes montecarlo
-monte = 1;
+monte = 100;
 p_avg = 0;
 p_avg_filt = 0;
 half_l = l/2;
@@ -50,8 +50,8 @@ for i = 1:(monte)
             * ensemble_1_filt(1,(0.5*(length(ensemble_1_filt(1,:)))) - (0.5 * (length(tau))) + j);
     end
     % plots montecarlo individuais
-    figure(2); plot(t, ensemble_1); title('Ensemble de 100 sorteios da simulação monte carlo do processo aleatório pré-filtragem');
-    figure(3); plot(t, ensemble_1_filt); title('Ensemble de 100 sorteios da simulação monte carlo do processo aleatório pós-filtragem');
+    figure(2); plot(t, ensemble_1); hold on; xlim([-1e-2 1e-2]); title('Ensemble de 100 sorteios da simulação monte carlo do processo aleatório pré-filtragem');
+    figure(3); plot(t, ensemble_1_filt); hold on; xlim([-1e-2 1e-2]); title('Ensemble de 100 sorteios da simulação monte carlo do processo aleatório pós-filtragem');
     
     % sobreposição dos ensembles
     figure(4); plot(t, ensemble_1); hold on; plot(t, ensemble_1_filt); title('Sobreposição dos ensembles pré e pós-filtragem');
@@ -70,12 +70,15 @@ figure(6); plot(tau, rx_ensemble_1_filt/monte); title('Autocorrelação rx do ense
 %% densidade espectral de potencia rx_ensemble
 figure(7); void_fft(1/dt,rx_ensemble_1); title('Densidade espectral de potência do ensemble');
 [X_1, f_1] = return_fft(1/dt, rx_ensemble_1);
-figure(8); loglog(f_1, abs(X_1)); title('Densidade espectral de potência do ensemble em escala log x log');
+figure(8); loglog(f_1, abs(X_1)); xlim([0 10^3.3]); title('Densidade espectral de potência do ensemble em escala log x log');
 
 %% densidade espectral de potencia rx_ensemble_filt
 figure(9); void_fft(1/dt,rx_ensemble_1_filt); title('Densidade espectral de potência do ensemble filtrado');
 [X_2, f_2] = return_fft(1/dt, rx_ensemble_1_filt);
-figure(10); loglog(f_2, abs(X_2)); title('Densidade espectral de potência do ensemble filtrado em escala log x log');
+figure(10); loglog(f_2, abs(X_2)); xlim([0 10^3.3]); title('Densidade espectral de potência do ensemble filtrado em escala log x log');
+
+figure(11); subplot(2,1,1); void_fft(1/dt,rx_ensemble_1); title('Comparativo entre as densidades espectrais de potência pré e pós filtragem'); subplot(2,1,2); void_fft(1/dt,rx_ensemble_1_filt); 
+figure(12);  subplot(2,1,1); loglog(f_1, abs(X_1)); title('Comparativo entre as densidades espectrais de potência pré e pós filtragem em escala log x log'); xlim([0 10^3.3]); subplot(2,1,2); loglog(f_2, abs(X_2)); xlim([0 10^3.3]);
 
 % funcoes auxiliares
 function [x] = ht(t)
@@ -107,4 +110,4 @@ function void_fft(fs, x)
         plot(f, abs(X)/n);
 end
         
-% algumas variáveis possuem o _1 no identificador pq a ideia era usar tc_1, tc_2, ..., tc_5
+% algumas variáveis possuem o _1 no identificador pq havia entendido que era necessário reproduzir tudo para tc_1, tc_2, ..., tc_5
